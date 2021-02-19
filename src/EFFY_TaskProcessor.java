@@ -13,13 +13,13 @@ public class EFFY_TaskProcessor {
 
     public void returnTaskString() {
         for (int i = 0; i < taskList.size(); i++) {
-            System.out.println(taskList.get(i).toString(i));
+            System.out.println(taskList.get(i).toString());
         }
     }
     public void getTaskListWithPriority(int priority){
         for(int i = 0; i < taskList.size(); i++) {
             if (taskList.get(i).priority==priority){
-                System.out.println(taskList.get(i).toString(i));
+                System.out.println(taskList.get(i).toString());
             }
         }
     }
@@ -27,14 +27,14 @@ public class EFFY_TaskProcessor {
     public  void  getTaskListWithStatus(String status){
         for(int i = 0; i < taskList.size(); i++) {
             if (taskList.get(i).status.equals(status)){
-                System.out.println(taskList.get(i).toString(i));
+                System.out.println(taskList.get(i).toString());
             }
         }
     }
     public void searchCommentWithKeyWord(String keyWord){
         for(int i = 0;i< taskList.size();i++){
             if (taskList.get(i).comment.contains(keyWord)){
-                System.out.println(taskList.get(i).toString(i));
+                System.out.println(taskList.get(i).toString());
             }
         }
     }

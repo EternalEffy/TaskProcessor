@@ -43,7 +43,7 @@ public class Task {
     public void setStatus(String status) {
         this.status = status;
     }
-    public String toString(int i){
+    public String toString(){
         return "Имя задачи: " + name + " Описание задачи: " + comment + " Приоритет задачи: " + priority + " Статус задачи: " + status;
     }
 
