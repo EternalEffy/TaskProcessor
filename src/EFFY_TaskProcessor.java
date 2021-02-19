@@ -1,16 +1,16 @@
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-public class EFFY_TaskProcessor {
-    ArrayList <Task> taskList = new ArrayList<>();
+public class EFFY_TaskProcessor{
+    private ArrayList <Task> taskList = new ArrayList<>();
 
-    public void addTask(String name,String comment, int priority, String status){
-        if(priority>=5) {
-            System.out.println("Приоритет должен быть задан от 0 до 4");
-            return;
+    public boolean addTask(String name,String comment, int priority, String status) {
+        if (priority>=0 && priority<5) {
+            taskList.add(new Task(name, comment, priority, status));
+            return true;
         }
-        taskList.add(new Task(name,comment,priority,status));
+        else return false;
     }
-
     public void returnTaskString() {
         for (int i = 0; i < taskList.size(); i++) {
             System.out.println(taskList.get(i).toString());
@@ -39,9 +39,12 @@ public class EFFY_TaskProcessor {
         }
     }
 
-    public void removeTask(int numberOfTask){
+    public void removeTask(int indexOfTaskInList){
         for(int i=0;i< taskList.size();i++){
-            if(i==numberOfTask) taskList.remove(i);
+            if(i==indexOfTaskInList){
+                taskList.remove(i);
+                break;
+            }
         }
     }
 

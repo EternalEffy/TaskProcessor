@@ -1,8 +1,9 @@
 public class Task {
     public String name;
     public String comment;
-    public int priority; //5
+    public int priority;
     public String status; //4
+
 
     public Task(String name, String comment, int priority, String status){
         setName(name);
