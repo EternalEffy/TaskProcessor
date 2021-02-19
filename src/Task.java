@@ -1,7 +1,7 @@
 public class Task {
     public String name;
     public String comment;
-    public Integer priority;
+    public int priority;
     public String status; //4
 
 

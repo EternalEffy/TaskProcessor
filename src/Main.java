@@ -28,11 +28,11 @@ public class Main {
 
         myTaskList.returnTaskString();
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        myTaskList.superFunction(1,priorityLow," "," ");
+        myTaskList.getTaskListWithPriority(priorityLow);
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        myTaskList.superFunction(2,null, isOpen," ");
+        myTaskList.getTaskListWithStatus(isOpen);
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        myTaskList.superFunction(3,null," ","Обязательно");
+        myTaskList.searchCommentWithKeyWord("Обязательно");
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         myTaskList.removeTask(4);
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
