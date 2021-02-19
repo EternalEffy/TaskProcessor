@@ -1,4 +1,3 @@
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class EFFY_TaskProcessor{
@@ -16,7 +15,38 @@ public class EFFY_TaskProcessor{
             System.out.println(taskList.get(i).toString());
         }
     }
-    public void getTaskListWithPriority(int priority){
+    public void removeTask(int indexOfTaskInList){
+        for(int i=0;i< taskList.size();i++){
+            if(i==indexOfTaskInList){
+                taskList.remove(i);
+                break;
+            }
+        }
+    }
+
+    public void superFunction(int indexMethod, Integer priority, String status, String keyWord) {
+        for (int i = 0; i < taskList.size(); i++) {
+            switch (indexMethod) {
+                case (1):
+                    if (taskList.get(i).priority == priority) {
+                        System.out.println(taskList.get(i).toString());
+                    }
+                    break;
+                case (2):
+                    if (taskList.get(i).status.equals(status)) {
+                        System.out.println(taskList.get(i).toString());
+                    }
+                    break;
+                case (3):
+                    if (taskList.get(i).comment.contains(keyWord)) {
+                        System.out.println(taskList.get(i).toString());
+                    }
+                    break;
+            }
+        }
+
+
+    /*public void getTaskListWithPriority(int priority){
         for(int i = 0; i < taskList.size(); i++) {
             if (taskList.get(i).priority==priority){
                 System.out.println(taskList.get(i).toString());
@@ -37,15 +67,8 @@ public class EFFY_TaskProcessor{
                 System.out.println(taskList.get(i).toString());
             }
         }
-    }
+    }*/
 
-    public void removeTask(int indexOfTaskInList){
-        for(int i=0;i< taskList.size();i++){
-            if(i==indexOfTaskInList){
-                taskList.remove(i);
-                break;
-            }
-        }
-    }
 
+    }
 }

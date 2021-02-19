@@ -23,18 +23,20 @@ public class Main {
     myTaskList.addTask("Позвонить маме","Обязательно сегодня",priorityLow,isWorking);
     myTaskList.addTask("Позвонить маме","Обязательно сегодня",priorityPreMiddle,isFinish);
     myTaskList.addTask("Позвонить маме","сегодня",priorityLow,isInDebugging);
-    myTaskList.returnTaskString();
-    System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-    myTaskList.getTaskListWithPriority(priorityLow);
-    System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-    myTaskList.getTaskListWithStatus("На рассмотрении");
-    System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-    myTaskList.searchCommentWithKeyWord("Обязательно");
-    System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-    myTaskList.removeTask(0);
-    System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-    myTaskList.returnTaskString();
+    myTaskList.addTask("Удали меня","Прямо сейчас",priorityHight,isWorking);
+    myTaskList.addTask("Позвонить маме","сегодня",priorityLow,isInDebugging);
 
+        myTaskList.returnTaskString();
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        myTaskList.superFunction(1,priorityLow," "," ");
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        myTaskList.superFunction(2,null, isOpen," ");
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        myTaskList.superFunction(3,null," ","Обязательно");
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        myTaskList.removeTask(4);
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        myTaskList.returnTaskString();
     }
 }
 
