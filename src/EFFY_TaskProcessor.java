@@ -10,53 +10,45 @@ public class EFFY_TaskProcessor{
         }
         else return false;
     }
-    public String returnTaskString() {
-        String taskListString = null;
-        for (int i = 0; i < taskList.size(); i++) {
-            taskListString +=taskList.get(i).toString();
-        }
-        return taskListString;
-    }
 
 
-    public int removeTask(int indexOfTaskInList){
-        int index = 0;
-        for(int i=0;i< taskList.size();i++){
-            if(i==indexOfTaskInList){
+    public int removeTask(int indexTask){
+        int i;
+        for(i=0;i< taskList.size();i++){
+            if(i==indexTask){
                 taskList.remove(i);
-                index=i;
                 break;
             }
         }
-        return index;
+        return i;
     }
 
     public ArrayList getTaskListWithPriority(int priority){
-        ArrayList <Task> newTaskListWIthPriority = new ArrayList<>();
+        ArrayList <Task> newTaskList = new ArrayList<>();
         for(int i = 0; i < taskList.size(); i++) {
             if (taskList.get(i).priority==priority){
-                newTaskListWIthPriority.add(taskList.get(i));
+                newTaskList.add(taskList.get(i));
             }
         }
-        return newTaskListWIthPriority;
+        return newTaskList;
     }
 
     public ArrayList  getTaskListWithStatus(String status){
-        ArrayList <Task> newTaskListWIthStatus = new ArrayList<>();
+        ArrayList <Task> newTaskList = new ArrayList<>();
         for(int i = 0; i < taskList.size(); i++) {
             if (taskList.get(i).status.equals(status)){
-                newTaskListWIthStatus.add(taskList.get(i));
+                newTaskList.add(taskList.get(i));
             }
         }
-        return newTaskListWIthStatus;
+        return newTaskList;
     }
     public ArrayList searchCommentWithKeyWord(String keyWord){
-        ArrayList <Task> newTaskListWIthSKeyWord = new ArrayList<>();
+        ArrayList <Task> newTaskList = new ArrayList<>();
         for(int i = 0;i< taskList.size();i++) {
             if (taskList.get(i).comment.contains(keyWord)) {
-                newTaskListWIthSKeyWord.add(taskList.get(i));
+                newTaskList.add(taskList.get(i));
             }
         }
-        return newTaskListWIthSKeyWord;
+        return newTaskList;
     }
 }

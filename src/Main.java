@@ -16,7 +16,6 @@ public class Main {
     myTaskList.addTask("Удали меня","Прямо сейчас",Constants.priorityHight,Constants.isWorking);
     myTaskList.addTask("Позвонить маме","сегодня",Constants.priorityLow,Constants.isInDebugging);
 
-        myTaskList.returnTaskString();
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         myTaskList.getTaskListWithPriority(Constants.priorityLow);
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
@@ -26,7 +25,6 @@ public class Main {
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         myTaskList.removeTask(4);
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        myTaskList.returnTaskString();
     }
 }
 
