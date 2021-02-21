@@ -30,13 +30,13 @@ public class Main {
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         myTaskList.getTaskListWithPriority(priorityLow);
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        myTaskList.getTaskListWithStatus(isOpen);
+        /*myTaskList.getTaskListWithStatus(isOpen);
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         myTaskList.searchCommentWithKeyWord("Обязательно");
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         myTaskList.removeTask(4);
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        myTaskList.returnTaskString();
+        myTaskList.returnTaskString();*/
     }
 }
 

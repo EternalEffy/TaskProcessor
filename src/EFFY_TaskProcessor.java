@@ -24,26 +24,44 @@ public class EFFY_TaskProcessor{
         }
     }
 
-    public void getTaskListWithPriority(int priority){
+    public ArrayList getTaskListWithPriority(int priority){
+        ArrayList <Task> newTaskListWIthPriority = new ArrayList<>();
         for(int i = 0; i < taskList.size(); i++) {
             if (taskList.get(i).priority==priority){
-                System.out.println(taskList.get(i).toString());
+                newTaskListWIthPriority.add(taskList.get(i));
             }
         }
+        //Добавляю цикл который выводит новый список для наглядности
+        for (int i = 0; i< newTaskListWIthPriority.size(); i++) {
+            System.out.println(newTaskListWIthPriority.get(i).toString());
+        }
+        return newTaskListWIthPriority;
     }
 
-    public  void  getTaskListWithStatus(String status){
+    public ArrayList  getTaskListWithStatus(String status){
+        ArrayList <Task> newTaskListWIthStatus = new ArrayList<>();
         for(int i = 0; i < taskList.size(); i++) {
             if (taskList.get(i).status.equals(status)){
-                System.out.println(taskList.get(i).toString());
+                newTaskListWIthStatus.add(taskList.get(i));
             }
         }
+        //Добавляю цикл который выводит новый список для наглядности
+        for (int i = 0; i< newTaskListWIthStatus.size(); i++) {
+            System.out.println(newTaskListWIthStatus.get(i).toString());
+        }
+        return newTaskListWIthStatus;
     }
-    public void searchCommentWithKeyWord(String keyWord){
+    public ArrayList searchCommentWithKeyWord(String keyWord){
+        ArrayList <Task> newTaskListWIthSKeyWord = new ArrayList<>();
         for(int i = 0;i< taskList.size();i++) {
             if (taskList.get(i).comment.contains(keyWord)) {
-                System.out.println(taskList.get(i).toString());
+                newTaskListWIthSKeyWord.add(taskList.get(i));
             }
         }
+        //Добавляю цикл который выводит новый список для наглядности
+        for (int i = 0; i< newTaskListWIthSKeyWord.size(); i++) {
+            System.out.println(newTaskListWIthSKeyWord.get(i).toString());
+        }
+        return newTaskListWIthSKeyWord;
     }
 }
