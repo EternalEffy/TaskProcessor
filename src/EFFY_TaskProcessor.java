@@ -10,18 +10,25 @@ public class EFFY_TaskProcessor{
         }
         else return false;
     }
-    public void returnTaskString() {
+    public String returnTaskString() {
+        String taskListString = null;
         for (int i = 0; i < taskList.size(); i++) {
-            System.out.println(taskList.get(i).toString());
+            taskListString +=taskList.get(i).toString();
         }
+        return taskListString;
     }
-    public void removeTask(int indexOfTaskInList){
+
+
+    public int removeTask(int indexOfTaskInList){
+        int index = 0;
         for(int i=0;i< taskList.size();i++){
             if(i==indexOfTaskInList){
                 taskList.remove(i);
+                index=i;
                 break;
             }
         }
+        return index;
     }
 
     public ArrayList getTaskListWithPriority(int priority){
@@ -30,10 +37,6 @@ public class EFFY_TaskProcessor{
             if (taskList.get(i).priority==priority){
                 newTaskListWIthPriority.add(taskList.get(i));
             }
-        }
-        //Добавляю цикл который выводит новый список для наглядности
-        for (int i = 0; i< newTaskListWIthPriority.size(); i++) {
-            System.out.println(newTaskListWIthPriority.get(i).toString());
         }
         return newTaskListWIthPriority;
     }
@@ -45,10 +48,6 @@ public class EFFY_TaskProcessor{
                 newTaskListWIthStatus.add(taskList.get(i));
             }
         }
-        //Добавляю цикл который выводит новый список для наглядности
-        for (int i = 0; i< newTaskListWIthStatus.size(); i++) {
-            System.out.println(newTaskListWIthStatus.get(i).toString());
-        }
         return newTaskListWIthStatus;
     }
     public ArrayList searchCommentWithKeyWord(String keyWord){
@@ -57,10 +56,6 @@ public class EFFY_TaskProcessor{
             if (taskList.get(i).comment.contains(keyWord)) {
                 newTaskListWIthSKeyWord.add(taskList.get(i));
             }
-        }
-        //Добавляю цикл который выводит новый список для наглядности
-        for (int i = 0; i< newTaskListWIthSKeyWord.size(); i++) {
-            System.out.println(newTaskListWIthSKeyWord.get(i).toString());
         }
         return newTaskListWIthSKeyWord;
     }
