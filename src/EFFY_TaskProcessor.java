@@ -28,7 +28,7 @@ public class EFFY_TaskProcessor{
     public ArrayList getTaskListWithPriority(int priority){
         ArrayList <Task> newTaskList = new ArrayList<>();
         for(int i = 0; i < taskList.size(); i++) {
-            if (taskList.get(i).priority==priority){
+            if (taskList.get(i).getPriority()==priority){
                 newTaskList.add(taskList.get(i));
             }
         }
@@ -38,7 +38,7 @@ public class EFFY_TaskProcessor{
     public ArrayList  getTaskListWithStatus(String status){
         ArrayList <Task> newTaskList = new ArrayList<>();
         for(int i = 0; i < taskList.size(); i++) {
-            if (taskList.get(i).status.equals(status)){
+            if (taskList.get(i).getStatus().equals(status)){
                 newTaskList.add(taskList.get(i));
             }
         }
@@ -47,7 +47,7 @@ public class EFFY_TaskProcessor{
     public ArrayList searchCommentWithKeyWord(String keyWord){
         ArrayList <Task> newTaskList = new ArrayList<>();
         for(int i = 0;i< taskList.size();i++) {
-            if (taskList.get(i).comment.contains(keyWord)) {
+            if (taskList.get(i).getComment().contains(keyWord)) {
                 newTaskList.add(taskList.get(i));
             }
         }
