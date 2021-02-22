@@ -8,6 +8,7 @@ public class EFFY_TaskProcessor{
 
     public EFFY_TaskProcessor() {
         ArrayList<Task> taskList = new ArrayList<>();
+        this.taskList = taskList;
     }
 
     public boolean addTask(String name,String comment, int priority, String status) {
