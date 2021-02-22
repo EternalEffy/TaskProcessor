@@ -1,13 +1,5 @@
 public class Constants {
-    public static int priorityLow = 0;
-    public static int priorityPreMiddle = 1;
-    public static int priorityMiddle = 2;
-    public static int priorityPreHight = 3;
-    public static int priorityHight = 4;
-
+    public static int priorityLow = 0,priorityPreMiddle = 1, priorityMiddle = 2, priorityPreHight = 3, priorityHight = 4;
     //константы статуса
-    public static String isOpen = "Открыта";
-    public static String isWorking ="В работе";
-    public static String isInDebugging = "В отладке";
-    public static String isFinish = "Выполнена";
+    public static String isOpen = "Открыта", isWorking ="В работе",isInDebugging = "В отладке", isFinish = "Выполнена";
 }

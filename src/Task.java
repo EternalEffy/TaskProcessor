@@ -1,8 +1,8 @@
 public class Task {
-    public String name;
-    public String comment;
-    public int priority;
-    public String status; //4
+    private String name;
+    String comment;
+    int priority;
+    String status; //4
 
 
     public Task(String name, String comment, int priority, String status){

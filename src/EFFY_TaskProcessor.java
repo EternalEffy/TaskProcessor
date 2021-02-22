@@ -1,7 +1,14 @@
+import com.sun.deploy.net.MessageHeader;
+
 import java.util.ArrayList;
 
 public class EFFY_TaskProcessor{
-    private ArrayList <Task> taskList = new ArrayList<>();
+
+    private ArrayList<Task> taskList;
+
+    public EFFY_TaskProcessor() {
+        ArrayList<Task> taskList = new ArrayList<>();
+    }
 
     public boolean addTask(String name,String comment, int priority, String status) {
         if (priority>=0 && priority<5) {
@@ -13,14 +20,8 @@ public class EFFY_TaskProcessor{
 
 
     public int removeTask(int indexTask){
-        int i;
-        for(i=0;i< taskList.size();i++){
-            if(i==indexTask){
-                taskList.remove(i);
-                break;
-            }
-        }
-        return i;
+        taskList.remove(indexTask);
+            return indexTask;
     }
 
     public ArrayList getTaskListWithPriority(int priority){
